@@ -49,8 +49,6 @@ async function getBookByID(inputID){
             console.log(`Erro! Nenhum livro encontrado com o ID: ${inputID}`)
         }
 
-
-
     } catch(err){
         console.log(`Oh não! Erro encontrado: ${err}`);
     }
@@ -74,8 +72,7 @@ async function deleteRow(inputID){
     try{
         const [rows, fields] = await pool.query(`DELETE FROM Biblioteca WHERE LivroID = ${inputID}`)
         console.log(`Book from ${inputID}, has been deleted.`)
-
-
+        
     } catch(err){
         console.log(`Oh não! Erro encontrado: ${err}`);
     }
