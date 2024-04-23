@@ -23,7 +23,6 @@ async function queryBooks(){
     try{
         const [rows] = await pool.query('SELECT * FROM Biblioteca');
 
-        // Access the values
         for (let row of rows) {
         console.log({
             id: row.LivroID,
